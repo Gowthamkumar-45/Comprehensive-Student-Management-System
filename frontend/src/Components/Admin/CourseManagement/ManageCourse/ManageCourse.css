@@ -1,0 +1,82 @@
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 0.75rem;
+    /* Increased gap slightly */
+    align-items: center;
+    justify-content: center;
+    /* Ensure left alignment */
+}
+
+.action-btn {
+    padding: 0.6rem 1rem;
+    /* Better padding */
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    min-width: 80px;
+    /* Ensure uniform width */
+    text-align: center;
+}
+
+.btn-view {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+.btn-view:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.btn-update {
+    background: #dbeafe;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
+
+.btn-update:hover {
+    background: #bfdbfe;
+    color: #1e3a8a;
+}
+
+.btn-delete {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.btn-delete:hover {
+    background: #fecaca;
+    color: #7f1d1d;
+}
+
+.loading-container,
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    color: #64748b;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid #38bdf8;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

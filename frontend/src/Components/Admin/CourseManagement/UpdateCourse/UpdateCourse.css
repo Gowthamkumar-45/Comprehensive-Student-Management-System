@@ -1,0 +1,396 @@
+.update-course-page {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f8fafc;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Sidebar Styling (Same as AddCourse) */
+.admin-sidebar {
+    width: 260px;
+    background: #1e293b;
+    color: white;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 2rem 2rem;
+    color: #38bdf8;
+}
+
+.admin-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-sidebar nav li {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    color: #94a3b8;
+}
+
+.admin-sidebar nav li a {
+    display: block;
+    padding: 1rem 2rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.admin-sidebar nav li:hover {
+    background: transparent !important;
+}
+
+.admin-sidebar nav li:hover a {
+    background: rgba(99, 102, 241, 0.05) !important;
+    color: #6366f1 !important;
+    transform: translateX(4px);
+}
+
+.admin-sidebar nav li.active {
+    background: transparent !important;
+}
+
+.admin-sidebar nav li.active a {
+    background: white !important;
+    color: #6366f1 !important;
+    position: relative;
+    box-shadow: 0 4px 12px -2px rgba(99, 102, 241, 0.12);
+    border-left: none !important;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 2rem 1.5rem !important;
+    width: 100% !important;
+    overflow-y: auto;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: #64748b;
+}
+
+
+/* Form Card Styling (Reused from AddCourse) */
+.form-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    padding: 2.5rem;
+    width: 100%;
+    /* max-width removed to allow full width as requested */
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 2rem;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.form-section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Elements */
+.update-course-page .form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.update-course-page .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.update-course-page .full-width {
+    width: 100%;
+}
+
+.update-course-page .form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #475569;
+}
+
+.update-course-page .form-group input,
+.update-course-page .form-group textarea,
+.update-course-page .form-group select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    outline: none;
+    background-color: #f8fafc;
+    width: 100%;
+    /* Ensure inputs take full width */
+    font-family: inherit;
+}
+
+.update-course-page .form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.update-course-page .form-group input:focus,
+.update-course-page .form-group textarea:focus,
+.update-course-page .form-group select:focus {
+    border-color: #38bdf8;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+}
+
+/* Status Banner */
+.update-course-page .status-banner {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.status-banner.success {
+    background-color: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.status-banner.error {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+/* Dynamic List Items (Arrays) */
+.update-course-page .list-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.update-course-page .list-item button {
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.list-item button:hover {
+    background: #fecaca;
+}
+
+.update-course-page .add-btn {
+    background: #f0f9ff;
+    color: #0284c7;
+    border: 1px dashed #7dd3fc;
+    padding: 0.75rem;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    margin-top: 0.5rem;
+}
+
+.add-btn:hover {
+    background: #e0f2fe;
+    border-color: #38bdf8;
+}
+
+/* Nested Cards (FAQs, Modules) */
+.update-course-page .nested-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.update-course-page .remove-nested {
+    background: white;
+    color: #ef4444;
+    border: 1px solid #fca5a5;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.2s;
+}
+
+.remove-nested:hover {
+    background: #fef2f2;
+    border-color: #ef4444;
+}
+
+.module-card {
+    border-left: 4px solid #38bdf8;
+}
+
+/* Topics Section inside Module */
+.update-course-page .topics-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.update-course-page .topic-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.update-course-page .topic-item button {
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.update-course-page .add-sub-btn {
+    background: white;
+    color: #6366f1;
+    border: 1px dashed #a5b4fc;
+    /* Different color for sub-items */
+    padding: 0.5rem;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.add-sub-btn:hover {
+    background: #eef2ff;
+    border-color: #6366f1;
+}
+
+
+/* Actions */
+.update-course-page .form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.update-course-page .submit-btn {
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background-color: #0369a1;
+    transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.update-course-page .cancel-btn {
+    background-color: white;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+
+.cancel-btn:hover {
+    background-color: #f1f5f9;
+    color: #334155;
+    border-color: #94a3b8;
+}
+
+.loading-container,
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    color: #64748b;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid #38bdf8;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

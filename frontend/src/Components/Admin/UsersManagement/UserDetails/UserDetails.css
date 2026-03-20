@@ -1,0 +1,436 @@
+.user-details-page {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f8fafc;
+}
+
+.details-content {
+    flex: 1;
+    max-width: 100%;
+}
+
+/* UserDetails.css Cleanup */
+.details-navigation {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 5%;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 3rem;
+}
+
+.back-navigation-btn {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid #e2e8f0;
+    background: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6366f1;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-navigation-btn:hover {
+    background: #f8fafc;
+    border-color: #6366f1;
+    transform: translateX(-4px);
+    color: #000;
+}
+
+.nav-breadcrumb {
+    color: #000000;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-family: 'Inter', -apple-system, sans-serif !important;
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 3rem;
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+    max-width: 1400px;
+}
+
+.profile-name-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-left-spacer {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    /* Helps keep center truly centered */
+}
+
+.user-profile-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+
+}
+
+.profile-avatar-large {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.profile-title h1 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    letter-spacing: -0.025em;
+}
+
+.profile-title p {
+    margin: 0.25rem 0 0;
+    color: #64748b;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.role-badge {
+    padding: 0.2rem 0.6rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-left: 0.5rem;
+}
+
+.role-admin {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.role-teacher {
+    background: #fef9c3;
+    color: #ca8a04;
+}
+
+.role-student {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.ac-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    /* Matching left side for symmetry */
+}
+
+.btn {
+    padding: 0.75rem 1.75rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.btn-update {
+    background-color: #0f172a;
+    color: white;
+}
+
+.btn-update:hover {
+    background-color: #000;
+    transform: translateY(-3px);
+}
+
+.btn-delete {
+    background-color: #fef2f2;
+    color: #ef4444;
+    border: 1px solid #fecaca;
+}
+
+.btn-delete:hover {
+    background-color: #fee2e2;
+    transform: translateY(-3px);
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 5% 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+.info-card h3 {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.for-photo {
+    flex-shrink: 0;
+}
+
+.profile-photo,
+.profile-photo-placeholder {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid #f1f5f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.profile-photo-placeholder {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detail-item label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.detail-item span {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .details-header {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .ac-buttons {
+        justify-content: center;
+    }
+
+    .info-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .info-content {
+        align-items: center;
+    }
+}
+
+/* Enrollment & Document Styles */
+.status-badges {
+    padding: 0.35rem 0rem;
+    font-size: 1rem !important;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.status-pending {
+    background: #fffbeb;
+    color: #d97706;
+}
+
+.status-approved {
+    color: #16a34a !important;
+    font-weight: 900 !important;
+}
+
+.status-rejected {
+    color: #dc2626 !important;
+    font-weight: 900 !important;
+}
+
+.document-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.document-item:hover {
+    border-color: #6366f1;
+    background: white;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.08);
+}
+
+.document-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doc-link {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.doc-link:hover {
+    background: #6366f1;
+    color: white;
+    border-color: #6366f1;
+}
+
+.enrollment-card {
+    grid-column: span 2;
+}
+
+.enrollment-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    text-align: left;
+}
+
+.enrollment-column h4 {
+    font-size: 1rem;
+    color: #6366f1;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 2rem 0;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #f1f5f9;
+    width: 100%;
+}
+
+.enrollment-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    text-align: left;
+}
+
+.enrollment-column .detail-item {
+    margin-top: 0.3rem;
+}
+
+.enrollment-column .detail-item:first-of-type {
+    margin-top: 0;
+}
+
+.highlight-text {
+    color: #6366f1 !important;
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+}
+
+.address-text {
+    line-height: 1.6;
+    display: block;
+    max-width: 300px;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+}
+
+.documents-card {
+    grid-column: span 2;
+}
+
+.documents-card .info-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+    .enrollment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+
+    .enrollment-card,
+    .documents-card {
+        grid-column: span 1;
+    }
+
+    .enrollment-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

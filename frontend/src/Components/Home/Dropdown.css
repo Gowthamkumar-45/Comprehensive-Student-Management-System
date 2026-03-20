@@ -1,0 +1,20 @@
+/* Dropdown Hover Effect */
+.dropdown-trigger:hover .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+.menu-item:hover {
+    background-color: rgba(99, 102, 241, 0.1) !important;
+    color: #6366f1 !important;
+}
+
+.logout-btn:hover {
+    background-color: rgba(239, 68, 68, 0.2) !important;
+}
+
+.avatar:hover {
+    border-color: #6366f1 !important;
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3) !important;
+}

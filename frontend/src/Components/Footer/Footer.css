@@ -1,0 +1,153 @@
+/* Footer Component Styles */
+.footer-section {
+    padding: 80px 5% 40px;
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    /* You might need to check if this image exists in your public/assets folder */
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../assets/images/footerbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 100px;
+    margin-bottom: 60px;
+}
+
+/* Footer Logo Styles */
+.footer-brand .home-logo {
+    margin-bottom: 20px;
+}
+
+.footer-brand .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-brand .logo-icon {
+    padding: 5px 8px;
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    border-radius: 8px;
+    font-size: 18px;
+    color: white;
+}
+
+.footer-brand .logo-text {
+    letter-spacing: -0.5px;
+    color: white;
+    font-weight: 700;
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 400px;
+}
+
+.footer-links-group {
+    display: flex;
+    gap: 80px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links h4 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #6366f1;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links-group {
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 60px 5% 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-links-group {
+        gap: 30px;
+    }
+}

@@ -1,0 +1,275 @@
+.academic-management-page {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar Styles - Premium White Theme */
+.admin-sidebar {
+    width: 280px;
+    height: 100vh;
+    background: #fdfdfd !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0 !important;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    border-right: 1px solid #e2e8f0;
+    box-shadow: 12px 0 35px -15px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-header {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    gap: 1.25rem;
+    background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-box {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-header h2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-sidebar nav {
+    padding: 2.5rem 0;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.admin-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-sidebar nav li {
+    margin-bottom: 0.75rem;
+    /* Space between tabs */
+    padding: 0 1rem;
+}
+
+.admin-sidebar nav li a {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.9rem 1.25rem;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.admin-sidebar nav li:hover {
+    background: transparent !important;
+}
+
+.admin-sidebar nav li:hover a {
+    background: rgba(99, 102, 241, 0.05) !important;
+    color: #6366f1 !important;
+    transform: translateX(4px);
+}
+
+.admin-sidebar nav li.active {
+    background: transparent !important;
+}
+
+.admin-sidebar nav li.active a {
+    background: white !important;
+    color: #6366f1 !important;
+    position: relative;
+    box-shadow: 0 4px 12px -2px rgba(99, 102, 241, 0.12);
+    border-left: none !important;
+}
+
+.admin-sidebar nav li.active a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 4px;
+    background: #6366f1;
+    border-radius: 0 4px 4px 0;
+}
+
+.academic-management-page .sidebar-divider {
+    height: 1px;
+    background: #334155;
+    margin: 1rem 0;
+    pointer-events: none;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 280px;
+    /* Adjust for fixed sidebar */
+    padding: 2.5rem 1.5rem !important;
+    width: calc(100% - 280px) !important;
+    overflow-y: auto;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+/* Dashboard Styles */
+.academic-dashboard-body {
+    padding: 0.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.academic-stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.stat-content h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin: 0.5rem 0;
+}
+
+.stat-trend {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.stat-icon-box {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.academic-chart-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.academic-section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 2rem 0 1.5rem;
+}
+
+.academic-action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.academic-action-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.academic-action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
+    border-color: #38bdf8;
+}
+
+.action-icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-icon-circle.c-purple {
+    background: #f5f3ff;
+    color: #8b5cf6;
+}
+
+.action-icon-circle.c-orange {
+    background: #fff7ed;
+    color: #f97316;
+}
+
+.action-icon-circle.c-blue {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.action-icon-circle.c-teal {
+    background: #f0fdfa;
+    color: #14b8a6;
+}
+
+.action-texts h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.action-texts p {
+    margin: 0.25rem 0 0;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+@media (max-width: 1200px) {
+    .academic-charts-grid {
+        grid-template-columns: 1fr !important;
+    }
+}

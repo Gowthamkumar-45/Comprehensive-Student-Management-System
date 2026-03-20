@@ -1,0 +1,272 @@
+.library-management-page {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar Styles - Premium White Theme */
+.admin-sidebar {
+    width: 280px;
+    height: 100vh;
+    background: #fdfdfd !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0 !important;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    border-right: 1px solid #e2e8f0;
+    box-shadow: 12px 0 35px -15px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-header {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    gap: 1.25rem;
+    background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-box {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-header h2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-sidebar nav {
+    padding: 2.5rem 0;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.admin-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-sidebar nav li {
+    margin-bottom: 0.75rem;
+    /* Space between tabs */
+    padding: 0 1rem;
+}
+
+.admin-sidebar nav li a {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.9rem 1.25rem;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.admin-sidebar nav li:hover {
+    background: transparent !important;
+}
+
+.admin-sidebar nav li:hover a {
+    background: rgba(99, 102, 241, 0.05) !important;
+    color: #6366f1 !important;
+    transform: translateX(4px);
+}
+
+.admin-sidebar nav li.active {
+    background: transparent !important;
+}
+
+.admin-sidebar nav li.active a {
+    background: white !important;
+    color: #6366f1 !important;
+    position: relative;
+    box-shadow: 0 4px 12px -2px rgba(99, 102, 241, 0.12);
+    border-left: none !important;
+}
+
+.admin-sidebar nav li.active a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 4px;
+    background: #6366f1;
+    border-radius: 0 4px 4px 0;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 280px;
+    /* Adjust for fixed sidebar */
+    padding: 2.5rem 1.5rem !important;
+    width: calc(100% - 280px) !important;
+    overflow-y: auto;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+.library-management-page .library-stats-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.library-management-page .stat-card {
+    background: #dbe0e8;
+    padding: 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: white !important;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: white !important;
+    margin-top: 0.5rem;
+}
+
+.library-management-page .library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.library-management-page .library-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.library-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #38bdf8;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.library-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #38bdf8;
+}
+
+.library-card:hover .card-badge {
+    visibility: visible;
+}
+
+.library-card:hover::before {
+    opacity: 1;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+}
+
+.card-badge {
+    background: #f1f5f9;
+    padding: 0.4rem 0.8rem;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    visibility: hidden;
+}
+
+.card-info h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.card-info p {
+    margin: 0.5rem 0 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.library-action-btn {
+    margin-top: auto;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #292f39;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.library-management-page .library-action-btn:hover {
+    background: #38bdf8;
+    color: white;
+
+}
+
+@media (max-width: 1024px) {
+    .library-stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 640px) {
+    .library-stats-strip {
+        grid-template-columns: 1fr;
+    }
+}
