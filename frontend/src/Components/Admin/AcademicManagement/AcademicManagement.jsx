@@ -129,7 +129,7 @@ const AcademicManagement = () => {
                                     <TrendingUp size={14} /> <span>Up 2% this year</span>
                                 </div>
                             </div>
-                            <div className="stat-icon-box" style={{ background: 'rgba(59, 130, 246, 0.1)' }}>
+                            <div className="stat-icon-box" style={{ background: 'rgba(60, 130, 246, 0.1)' }}>
                                 <Users size={22} color="#3b82f6" />
                             </div>
                         </motion.div>
