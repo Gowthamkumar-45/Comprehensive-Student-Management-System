@@ -116,12 +116,11 @@ const AcademicManagement = () => {
                     animate="visible"
                 >
                     <div className="dash-header" style={{ marginBottom: '1rem', marginTop: '1rem' }}>
-                        <motion.h1 variants={itemVariants} style={{ fontSize: '1.8rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.25rem' }}>Academic Portal</motion.h1>
-                        <motion.p variants={itemVariants} style={{ color: '#64748b', fontSize: '1rem', margin: 0 }}>Streamline academic workflows, examination processes, and student success tracking.</motion.p>
+                        <motion.h1 variants={itemVariants} style={{ fontSize: '1.8rem', fontWeight: 800, color: '#0f172a', marginBottom: '1.7rem' }}>Academic Portal</motion.h1>
                     </div>
 
                     {/* Top Section: Stats Cards */}
-                    <div className="stats-row" style={{ gap: '1rem', marginBottom: '1rem' }}>
+                    <div className="stats-row" style={{ gap: '1rem', marginBottom: '1.7rem' }}>
                         <motion.div className="stat-card-clean" variants={itemVariants} whileHover={{ y: -5 }}>
                             <div className="stat-content">
                                 <h4>Total Students</h4>
@@ -177,7 +176,7 @@ const AcademicManagement = () => {
 
                     {/* Charts Section */}
                     <div className="charts-grid" style={{ marginBottom: '1rem' }}>
-                        <motion.div className="chart-container-card" variants={itemVariants} style={{ height: '30vh', minHeight: '260px', display: 'flex', flexDirection: 'column' }}>
+                        <motion.div className="chart-container-card" variants={itemVariants} style={{ height: '61vh', minHeight: '260px', display: 'flex', flexDirection: 'column' }}>
                             <div className="card-title-row" style={{ flexShrink: 0, padding: '15px 20px 5px' }}>
                                 <h3 style={{ margin: 0, fontSize: '1.15rem', fontWeight: 700, color: '#1e293b' }}>Attendance Trends</h3>
                             </div>
@@ -200,7 +199,7 @@ const AcademicManagement = () => {
                             </div>
                         </motion.div>
 
-                        <motion.div className="chart-container-card" variants={itemVariants} style={{ height: '30vh', minHeight: '260px', display: 'flex', flexDirection: 'column' }}>
+                        <motion.div className="chart-container-card" variants={itemVariants} style={{ height: '61vh', minHeight: '260px', display: 'flex', flexDirection: 'column' }}>
                             <div className="card-title-row" style={{ flexShrink: 0, padding: '15px 20px 5px' }}>
                                 <h3 style={{ margin: 0, fontSize: '1.15rem', fontWeight: 700, color: '#1e293b' }}>Performance Grade Distribution</h3>
                             </div>

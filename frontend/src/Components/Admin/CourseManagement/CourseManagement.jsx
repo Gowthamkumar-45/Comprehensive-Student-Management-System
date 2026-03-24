@@ -184,8 +184,8 @@ const CourseManagement = () => {
                     </div>
 
                     {/* Charts Section */}
-                    <div className="charts-grid" style={{ marginBottom: '1rem', gridTemplateColumns: '1.2fr 1fr', alignItems: 'center' }}>
-                        <motion.div className="chart-container-card" variants={itemVariants} style={{ height: '60vh', minHeight: '350px', display: 'flex', flexDirection: 'column' }}>
+                    <div className="charts-grid" style={{ marginBottom: '1rem', marginTop: '2rem', gridTemplateColumns: '1.2fr 1fr', alignItems: 'center' }}>
+                        <motion.div className="chart-container-card" variants={itemVariants} style={{ height: '61vh', minHeight: '350px', display: 'flex', flexDirection: 'column' }}>
                             <div className="card-title-row" style={{ padding: '15px 20px 5px', flexShrink: 0 }}>
                                 <h3 style={{ margin: 0, fontSize: '1.15rem', fontWeight: 700, color: '#1e293b' }}>Department Enrollment</h3>
                             </div>
@@ -221,7 +221,7 @@ const CourseManagement = () => {
                             </div>
                         </motion.div>
 
-                        <motion.div className="chart-container-card" variants={itemVariants} style={{ height: '60vh', minHeight: '260px', display: 'flex', flexDirection: 'column' }}>
+                        <motion.div className="chart-container-card" variants={itemVariants} style={{ height: '61vh', minHeight: '260px', display: 'flex', flexDirection: 'column' }}>
                             <div className="card-title-row" style={{ padding: '15px 20px 5px', flexShrink: 0 }}>
                                 <h3 style={{ margin: 0, fontSize: '1.15rem', fontWeight: 700, color: '#1e293b' }}>Most Enrolled Courses</h3>
                             </div>

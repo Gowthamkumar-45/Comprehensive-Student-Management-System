@@ -6,7 +6,7 @@ import {
     Users, UserPlus, GraduationCap,
     School, Settings,
     TrendingUp, TrendingDown,
-    ChevronRight
+    ChevronRight, ArrowLeft
 } from 'lucide-react';
 import {
     AreaChart, Area, XAxis, YAxis,
@@ -91,23 +91,6 @@ const UserDashboard = () => {
             <Sidebar />
 
             <main className="main-contents">
-                {/* <header className="topbar">
-                    <div className="search-field">
-                        <Search size={18} color="#94a3b8" />
-                        <input type="text" placeholder="Search system repository..." />
-                    </div>
-
-                    <div className="topbar-actions">
-                        <motion.div className="icon-btn" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            <Bell size={20} />
-                        </motion.div>
-                        <div className="user-profile-toggle">
-                            <div className="avatar-mini">A</div>
-                            <span style={{ fontSize: '0.9rem', fontWeight: 700, color: '#1e293b' }}>Administrator</span>
-                        </div>
-                    </div>
-                </header> */}
-
                 <motion.div
                     className="dashboard-body"
                     variants={containerVariants}
@@ -178,7 +161,7 @@ const UserDashboard = () => {
                             <div className="card-title-row">
                                 <h3>Registration Velocity</h3>
                             </div>
-                            <div style={{ height: '350px', width: '100%' }}>
+                            <div style={{ height: '280px', width: '100%' }}>
                                 <ResponsiveContainer width="100%" height="100%">
                                     <AreaChart data={growthData}>
                                         <defs>
@@ -201,7 +184,7 @@ const UserDashboard = () => {
                             <div className="card-title-row">
                                 <h3>Role Distribution</h3>
                             </div>
-                            <div style={{ height: '350px', width: '100%', position: 'relative' }}>
+                            <div style={{ height: '280px', width: '100%', position: 'relative' }}>
                                 <div style={{
                                     position: 'absolute',
                                     top: '45%',

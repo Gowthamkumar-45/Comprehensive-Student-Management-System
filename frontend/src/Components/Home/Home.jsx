@@ -154,18 +154,23 @@ const Home = () => {
                                         <span className="sidebar-icon">📊</span>
                                         <span>Dashboard</span>
                                     </Link>
-                                    <Link to="/teacher-list" className="sidebar-item" onClick={closeSidebar}>
-                                        <span className="sidebar-icon">🎓</span>
-                                        <span>View Student List</span>
+                                    <Link to="/teacher-classes" className="sidebar-item" onClick={closeSidebar}>
+                                        <span className="sidebar-icon">📚</span>
+                                        <span>My Classes</span>
                                     </Link>
-
                                     <Link to="/teacher-attendance" className="sidebar-item" onClick={closeSidebar}>
                                         <span className="sidebar-icon">🖥️</span>
-                                        <span>Take Attendance</span>
+                                        <span>Student Attendance</span>
                                     </Link>
-
+                                    <Link to="/teacher-grading" className="sidebar-item" onClick={closeSidebar}>
+                                        <span className="sidebar-icon">📝</span>
+                                        <span>Assignments & Grading</span>
+                                    </Link>
+                                    <Link to="/teacher-announcements" className="sidebar-item" onClick={closeSidebar}>
+                                        <span className="sidebar-icon">📢</span>
+                                        <span>Announcements</span>
+                                    </Link>
                                 </>
-
                             )}
                             {user.role === 'student' && (
                                 <>
@@ -173,13 +178,25 @@ const Home = () => {
                                         <span className="sidebar-icon">📊</span>
                                         <span>Dashboard</span>
                                     </Link>
+                                    <Link to="/student-courses" className="sidebar-item" onClick={closeSidebar}>
+                                        <span className="sidebar-icon">📚</span>
+                                        <span>My Courses</span>
+                                    </Link>
+                                    <Link to="/student-grades" className="sidebar-item" onClick={closeSidebar}>
+                                        <span className="sidebar-icon">🎓</span>
+                                        <span>Grades & Transcripts</span>
+                                    </Link>
                                     <Link to="/student-attendance" className="sidebar-item" onClick={closeSidebar}>
                                         <span className="sidebar-icon">📅</span>
                                         <span>My Attendance</span>
                                     </Link>
                                     <Link to="/student-timetable" className="sidebar-item" onClick={closeSidebar}>
                                         <span className="sidebar-icon">🕰️</span>
-                                        <span> Timetable</span>
+                                        <span>Timetable</span>
+                                    </Link>
+                                    <Link to="/student-library" className="sidebar-item" onClick={closeSidebar}>
+                                        <span className="sidebar-icon">📖</span>
+                                        <span>Library Resources</span>
                                     </Link>
                                 </>
                             )}

@@ -137,8 +137,8 @@
 /* Main Dashboard Area */
 .dashboard-main-content {
     flex: 1;
-    margin-left: 280px;
-    /* Adjust for fixed sidebar */
+    margin-left: 0;
+    /* Removed fixed sidebar margin */
     padding: 2.5rem;
     overflow-y: auto;
     display: flex;
@@ -313,7 +313,7 @@
 
 .admin-chart-card {
     height: auto;
-    min-height: 400px;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
 }

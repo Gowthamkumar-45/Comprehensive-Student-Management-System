@@ -166,6 +166,7 @@
     font-weight: 800;
     color: #0f172a;
     margin-bottom: 0.5rem;
+    margin-top: 0.9rem !important;
 }
 
 .dash-header p {

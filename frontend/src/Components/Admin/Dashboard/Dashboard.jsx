@@ -104,39 +104,16 @@ const Dashboard = () => {
 
     return (
         <div className="standalone-dashboard-page">
-            {/* Side Navigation for Consistency */}
-            <div className="dashboard-sidebar">
-                <div className="sidebar-header">
-                    <motion.div
-                        className="logo-box"
-                        whileHover={{ rotate: 10, scale: 1.05 }}
-                    >
-                        <ShieldCheck color="#6366f1" size={24} />
-                    </motion.div>
-                    <h2>Admin Portal</h2>
-                </div>
-                <nav>
-                    <ul>
-                        <li className="active"><Link to="/admin-dashboard">Dashboard</Link></li>
-                        <li><Link to="/admin/users-management">Users Management</Link></li>
-                        <li><Link to="/admin/course-management">Course Management</Link></li>
-                        <li><Link to="/admin/academic-management">Academic Management</Link></li>
-                        <li><Link to="/admin/enrollment-management">Enrollments</Link></li>
-                        <li><Link to="/admin/library-management">Library Management</Link></li>
-                        <li><Link to="/admin/reports">Reports</Link></li>
-                        <li className="back-link" onClick={() => navigate('/')}>
-                            <ArrowLeft size={16} />
-                            <span>Back to Home</span>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
             <div className="dashboard-main-content">
                 <div className="dashboard-header-container">
-                    <div className="dashboard-greeting">
-                        <h1 className="admin-page-title">Welcome back, {user ? user.first_name || user.username : 'Admin'} 👋</h1>
-                        <p className="admin-page-subtitle">Here is what's happening in your institution today.</p>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+                        <button className="admin-icon-btn back-btn" onClick={() => navigate('/')} title="Back to Home">
+                            <ArrowLeft size={24} />
+                        </button>
+                        <div className="dashboard-greeting">
+                            <h1 className="admin-page-title">Welcome back, {user ? user.first_name || user.username : 'Admin'} 👋</h1>
+                            <p className="admin-page-subtitle">Here is what's happening in your institution today.</p>
+                        </div>
                     </div>
                     <div className="dashboard-actions">
                         <button className="admin-primary-btn">

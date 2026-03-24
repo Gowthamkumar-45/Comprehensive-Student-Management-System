@@ -21,6 +21,8 @@ import EnrollmentForm from './Components/Enrollment/EnrollmentForm';
 import EnrollmentManagement from './Components/Admin/EnrollmentManagement/EnrollmentManagement';
 import AssignFaculty from './Components/Admin/CourseManagement/AssignFaculty/AssignFaculty';
 import Dashboard from './Components/Admin/Dashboard/Dashboard';
+import TeacherDashboard from './Components/Teacher/Dashboard/TeacherDashboard';
+import StudentDashboard from './Components/Student/Dashboard/StudentDashboard';
 import './App.css';
 
 // Admin System App Shell
@@ -32,9 +34,18 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin-dashboard" element={<Dashboard />} />
-          {/* <Route path="/dashboard" element={<Navigate to="/" replace />} />
-          <Route path="/teacher-dashboard" element={<Navigate to="/" replace />} />
-          <Route path="/student-dashboard" element={<Navigate to="/" replace />} /> */}
+          {/* <Route path="/dashboard" element={<Navigate to="/" replace />} /> */}
+          <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
+          <Route path="/teacher-classes" element={<TeacherDashboard />} />
+          <Route path="/teacher-attendance" element={<TeacherDashboard />} />
+          <Route path="/teacher-grading" element={<TeacherDashboard />} />
+          <Route path="/teacher-announcements" element={<TeacherDashboard />} />
+          <Route path="/student-dashboard" element={<StudentDashboard />} />
+          <Route path="/student-courses" element={<StudentDashboard />} />
+          <Route path="/student-grades" element={<StudentDashboard />} />
+          <Route path="/student-attendance" element={<StudentDashboard />} />
+          <Route path="/student-timetable" element={<StudentDashboard />} />
+          <Route path="/student-library" element={<StudentDashboard />} />
           <Route path="/admin/create-user" element={<CreateUser />} />
           <Route path="/admin/manage-users" element={<AllUsers />} />
           <Route path="/admin/students" element={<StudentDirectory />} />
